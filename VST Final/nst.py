@@ -42,7 +42,7 @@ def preprocess_frame(frame):
     return tensor_rgb.to(device)
 
 
-# process the image data
+# flatten the image tensor back into an image
 def postprocess_frame(tensor):
     img_np = tensor.squeeze(0).detach().cpu().numpy().transpose(1, 2, 0)
     img_np = np.clip(img_np, 0, 1)
@@ -89,19 +89,19 @@ def inference_video(content_video, checkpoint_model, output_path):
     transformer.eval()
 
     # video attributes
-    cap = cv2.VideoCapture(content_video)
-    fps = int(cap.get(cv2.CAP_PROP_FPS))
-    w, h = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(
-        cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
+    vid = cv2.VideoCapture(content_video)
+    fps = int(vid.get(cv2.CAP_PROP_FPS))
+    w, h = int(vid.get(cv2.CAP_PROP_FRAME_WIDTH)), int(
+        vid.get(cv2.CAP_PROP_FRAME_HEIGHT)
     )
 
     # set up mp4 codec and writer
     fourcc = cv2.VideoWriter_fourcc(*"mp4v")
     out = cv2.VideoWriter(output_path, fourcc, fps, (w, h))
 
-    # inference
-    while cap.isOpened():
-        ret, frame = cap.read()
+    # main loop, style frames
+    while vid.isOpened():
+        ret, frame = vid.read()
         if not ret:
             break
 
@@ -113,5 +113,5 @@ def inference_video(content_video, checkpoint_model, output_path):
         out.write(stylized_frame)
 
     # release
-    cap.release()
+    vid.release()
     out.release()

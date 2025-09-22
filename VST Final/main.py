@@ -27,7 +27,8 @@ def interface_setup():
     # body split into 3 vertical columns
     # col1, _margin1, col2, _margin2, col3 = st.columns([12, 0.3, 12, 0.3, 12])
     col1, col2, col3 = st.columns([12, 12, 12])
-    flag = None  # 0-image, 1-video
+    # 0 image, 1 video
+    flag = None
 
     with col1:
         st.subheader("**Upload Your File**")
@@ -106,7 +107,7 @@ def interface_setup():
                 )
                 byte_im = buffer.getvalue()
                 st.download_button(
-                    label="📥 Download Output Image",
+                    label="Download Output Image",
                     data=byte_im,
                     file_name="styled_image.jpg",
                     mime="image/jpg",
@@ -124,7 +125,7 @@ def interface_setup():
                     f"Processing...",
                     expanded=True,
                 ) as status:
-                    output_path = "styled_video.mp4"
+                    output_path = "./output/styled_video.mp4"
                     output_vid = nst.inference_video(
                         content_video=temp_file_path,
                         checkpoint_model=styles[chose_style],
@@ -138,7 +139,7 @@ def interface_setup():
                     video_bytes = f.read()
 
                 st.download_button(
-                    label="📥 Download Output Video",
+                    label="Download Output Video",
                     data=video_bytes,
                     file_name=output_path,
                     mime="video/mp4",
