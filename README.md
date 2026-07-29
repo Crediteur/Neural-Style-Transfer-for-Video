@@ -1,8 +1,8 @@
 # Neural Style Transfer for Video
 
 A user-friendly neural style transfer webapp that aims to stylize both images and video files. Based on [research](https://arxiv.org/abs/1508.06576) of fast feedforward style ML models to significantly improve performance.
-
 Utilizes the [streamlit](https://docs.streamlit.io/) framework as frontend.
+<img width="1313" height="713" alt="NST_video_preview" src="https://github.com/user-attachments/assets/f142a0d1-d311-4f9c-a6fe-43fe1a82b56e" />
 
 ## Examples
 
@@ -27,11 +27,11 @@ Navigate to main directory, run, and open in browser:
 ```bash
 streamlit run main.py
 
-> Local URL: http://localhost:xxxx
+# Local URL: http://localhost:xxxx
 ```
 
 If you have a powerful Nvidia GPU, download necessary cuDNN and CUDA drivers to speed up rendering time.
-Run `cude.py` to check if viable GPU is enabled.
+Run `cuda.py` to check if viable GPU is enabled.
 
 ## Installation
 
