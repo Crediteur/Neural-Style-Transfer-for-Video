@@ -31,33 +31,72 @@ Utilizes the [streamlit](https://docs.streamlit.io/) framework as frontend.
         alt="Tubingen stylized with Starry Night" 
         width="400">
     </td>
-  </tr>
+    </tr>
+      <tr>
+      <td>
+        <img 
+          src="https://github.com/user-attachments/assets/27e2c3c1-ee9d-4899-a804-654cc09d6244" 
+          alt="Photo of family" 
+          width="400">
+      </td>
+      <td>
+        <img 
+          src="VST%20Final/input/kandinsky.jpg" 
+          alt="Composition VII by Kandinsky" 
+          width="400">
+      </td>
+      <td>
+        <img 
+          src="https://github.com/user-attachments/assets/ace792a7-e79b-42d7-a585-2210d3225a1b" 
+          alt="Family photo styled in Kandinsky's style" 
+          width="400">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img 
+          src="https://github.com/user-attachments/assets/a97e367b-a7f4-4dad-a386-5cb9bfea1440" 
+          alt="Photo of peaches in a vase stand" 
+          width="400">
+      </td>
+      <td>
+        <img 
+          src="VST%20Final/input/picasso.jpg" 
+          alt="The Starry Night by Van Gogh" 
+          width="400">
+      </td>
+      <td>
+        <img 
+          src="https://github.com/user-attachments/assets/08cbf979-72bd-4a5f-853d-1be0d3722ab1" 
+          alt="Picasso styled peaches" 
+          width="400">
+      </td>
+    </tr>
 </table>
 
 <table>
   <tr>
-    <th>Video Input</th>
-    <th>Style</th>
-    <th>Output</th>
+    <td>
+      <video 
+        src="https://github.com/user-attachments/assets/fb91116f-5d85-431e-b0d4-3e710bbb814e"
+        alt="Video of a girl looking over a waterfall 1080p">
+    </td>
+    <td>
+      <video 
+        src="https://github.com/user-attachments/assets/140213da-8c57-4649-9df3-ee740c3f0d4a"
+        alt="Kandinsky styled video of a girl looking over a waterfall">
+    </td>
   </tr>
   <tr>
     <td>
       <video 
-        src="https://github.com/user-attachments/assets/fb91116f-5d85-431e-b0d4-3e710bbb814e"
-        alt="video of a girl looking over a waterfall 1080p"
-        width="100" height="100">
-    </td>
-    <td>
-      <img 
-        src="VST%20Final/input/kandinsky.jpg" 
-        alt="Composition VII by Wassily Kandinsky" 
-        width="400">
+        src="https://github.com/user-attachments/assets/bd6de812-7744-46c2-b892-b0d2b08f7e00"
+        alt="Kandinsky styled video of a girl looking over a waterfall">
     </td>
     <td>
       <video 
-        src="https://github.com/user-attachments/assets/bd6de812-7744-46c2-b892-b0d2b08f7e00"
-        alt="Kandinsky styled video of a girl looking over a waterfall"
-        width="100" height="100">
+        src="https://github.com/user-attachments/assets/2a47ac8a-9b92-4b41-b217-f0e09cb4b2be"
+        alt="">
     </td>
   </tr>
 </table>
