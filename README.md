@@ -111,7 +111,7 @@ streamlit run main.py
 # Local URL: http://localhost:xxxx
 ```
 
-If you have a powerful Nvidia GPU, download necessary cuDNN and CUDA drivers to speed up rendering time.
+If you have a compatible Nvidia GPU, download necessary cuDNN and CUDA drivers to speed up rendering time.
 Run `cuda.py` to check if viable GPU is enabled.
 
 ## Installation
