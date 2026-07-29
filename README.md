@@ -6,19 +6,61 @@ Utilizes the [streamlit](https://docs.streamlit.io/) framework as frontend.
 
 ## Examples
 
-Image Input
-![Photo of Tubingen houses](/VST%20Final/input/tubingen.jpg)
-Style Input
-![The Starry Night by Van Gogh - 1889](/VST%20Final/input/gogh.jpg)
-Style Output
-![Tubingen stylized with Starry Night](/VST%20Final/output/Starry%20Night_image4.jpg)
+<table>
+  <tr>
+    <th>Image Input</th>
+    <th>Style</th>
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>
+      <img 
+        src="VST%20Final/input/tubingen.jpg" 
+        alt="Photo of Tubingen houses" 
+        width="400">
+    </td>
+    <td>
+      <img 
+        src="VST%20Final/input/gogh.jpg" 
+        alt="The Starry Night by Van Gogh" 
+        width="400">
+    </td>
+    <td>
+      <img 
+        src="VST%20Final/output/Starry%20Night_image4.jpg" 
+        alt="Tubingen stylized with Starry Night" 
+        width="400">
+    </td>
+  </tr>
+</table>
 
-Video Input
-![Girl looking over waterfall 1080p](/VST%20Final/input/waterfall_1080.mp4)
-Style Input
-![Composition VII by Wassily Kandinsky - 1913](/VST%20Final/input/kandinsky.jpg)
-Style Output
-![Waterfall video stylized with Composition VII](/VST%20Final/output/Composition%20VII_video.mp4)
+<table>
+  <tr>
+    <th>Video Input</th>
+    <th>Style</th>
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>
+      <video 
+        src="https://github.com/user-attachments/assets/fb91116f-5d85-431e-b0d4-3e710bbb814e"
+        alt="video of a girl looking over a waterfall 1080p"
+        width="100" height="100">
+    </td>
+    <td>
+      <img 
+        src="VST%20Final/input/kandinsky.jpg" 
+        alt="Composition VII by Wassily Kandinsky" 
+        width="400">
+    </td>
+    <td>
+      <video 
+        src="https://github.com/user-attachments/assets/bd6de812-7744-46c2-b892-b0d2b08f7e00"
+        alt="Kandinsky styled video of a girl looking over a waterfall"
+        width="100" height="100">
+    </td>
+  </tr>
+</table>
 
 ## Usage
 
