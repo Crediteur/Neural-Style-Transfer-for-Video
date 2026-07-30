@@ -2,6 +2,7 @@
 
 A user-friendly photo filter app based on Neural Style Transfer research by [Gatys](https://arxiv.org/abs/1508.06576). Expands original functionality to include video file processing by using masking techniques to preserve continuous motion and reduce artifacts. Exchangeable weights from pre-training on specific images allow fast feed forward style processing to significantly improve computation performance- at the trade-off of limited style options.
 Utilizes [Streamlit](https://docs.streamlit.io/) framework as a UX frontend.
+
 <img width="1313" height="713" alt="NST_video_preview" src="https://github.com/user-attachments/assets/f142a0d1-d311-4f9c-a6fe-43fe1a82b56e" />
 
 ## Examples
