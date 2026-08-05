@@ -89,10 +89,10 @@ def interface_setup():
         st.write("")
 
         styles = {
-            "Starry Night": "models/parameters_van_gogh.pth",
-            "Girl with a Mandolin": "models/parameters_picasso.pth",
-            "Composition VII": "models/parameters_kandinsky.pth",
-            "Indigo Mountains": "models/parameters_spacefrog.pth",
+            "Starry Night": parent_dir / "models/parameters_van_gogh.pth",
+            "Girl with a Mandolin": parent_dir / "models/parameters_picasso.pth",
+            "Composition VII": parent_dir / "models/parameters_kandinsky.pth",
+            "Indigo Mountains": parent_dir / "models/parameters_spacefrog.pth",
         }
 
         if uploaded_file is not None and style_btn:
