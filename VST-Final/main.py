@@ -68,10 +68,10 @@ def interface_setup():
         with sub_col2:
             style_btn = st.button("Stylize", type="secondary", width="stretch")
 
-        style1 = Image.open("input\\gogh.jpg")
-        style2 = Image.open("input\\picasso.jpg")
-        style3 = Image.open("input\\kandinsky.jpg")
-        style4 = Image.open("input\\mountains.jpg")
+        style1 = Image.open(".\\input\\gogh.jpg")
+        style2 = Image.open(".\\input\\picasso.jpg")
+        style3 = Image.open(".\\input\\kandinsky.jpg")
+        style4 = Image.open(".\\input\\mountains.jpg")
 
         sub_col1, sub_col2 = st.columns(2)
         with sub_col1:
@@ -86,10 +86,10 @@ def interface_setup():
         st.write("")
 
         styles = {
-            "Starry Night": "models\\parameters_van_gogh.pth",
-            "Girl with a Mandolin": "models\\parameters_picasso.pth",
-            "Composition VII": "models\\parameters_kandinsky.pth",
-            "Indigo Mountains": "models\\parameters_spacefrog.pth",
+            "Starry Night": ".\\models\\parameters_van_gogh.pth",
+            "Girl with a Mandolin": ".\\models\\parameters_picasso.pth",
+            "Composition VII": ".\\models\\parameters_kandinsky.pth",
+            "Indigo Mountains": ".\\models\\parameters_spacefrog.pth",
         }
 
         if uploaded_file is not None and style_btn:
@@ -110,7 +110,7 @@ def interface_setup():
                     label="Download Output Image",
                     data=byte_im,
                     file_name="styled_image.jpg",
-                    mime="image\\jpg",
+                    mime="image/jpg",
                     type="primary",
                 )
 
