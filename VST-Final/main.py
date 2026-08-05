@@ -9,6 +9,11 @@ import torchvision
 import streamlit as st
 import nst
 
+from pathlib import Path
+
+# get parent directory path of current file
+parent_dir = Path(__file__).resolve().parent
+
 
 # set up streamlit interface, similar to setting up a html webpage and css
 def interface_setup():
@@ -16,12 +21,10 @@ def interface_setup():
 
     # header
     st.title("Neural Style Transfer for Image and Video")
-    st.markdown(
-        """
+    st.markdown("""
         This app functionally combines a content of one image with the style features of another image.    
         Simply upload an image or video and select a style image to begin.
-        """
-    )
+        """)
     st.divider()
 
     # body split into 3 vertical columns
@@ -68,10 +71,10 @@ def interface_setup():
         with sub_col2:
             style_btn = st.button("Stylize", type="secondary", width="stretch")
 
-        style1 = Image.open("./input/gogh.jpg")
-        style2 = Image.open("./input/picasso.jpg")
-        style3 = Image.open("./input/kandinsky.jpg")
-        style4 = Image.open("./input/mountains.jpg")
+        style1 = Image.open(parent_dir / "input/gogh.jpg")
+        style2 = Image.open(parent_dir / "input/picasso.jpg")
+        style3 = Image.open(parent_dir / "input/kandinsky.jpg")
+        style4 = Image.open(parent_dir / "input/mountains.jpg")
 
         sub_col1, sub_col2 = st.columns(2)
         with sub_col1:
@@ -86,10 +89,10 @@ def interface_setup():
         st.write("")
 
         styles = {
-            "Starry Night": "./models/parameters_van_gogh.pth",
-            "Girl with a Mandolin": "./models/parameters_picasso.pth",
-            "Composition VII": "./models/parameters_kandinsky.pth",
-            "Indigo Mountains": "./models/parameters_spacefrog.pth",
+            "Starry Night": "models/parameters_van_gogh.pth",
+            "Girl with a Mandolin": "models/parameters_picasso.pth",
+            "Composition VII": "models/parameters_kandinsky.pth",
+            "Indigo Mountains": "models/parameters_spacefrog.pth",
         }
 
         if uploaded_file is not None and style_btn:
@@ -125,7 +128,7 @@ def interface_setup():
                     f"Processing...",
                     expanded=True,
                 ) as status:
-                    output_path = "./output/styled_video.mp4"
+                    output_path = parent_dir / "output/styled_video.mp4"
                     output_vid = nst.inference_video(
                         content_video=temp_file_path,
                         checkpoint_model=styles[chose_style],
@@ -149,11 +152,9 @@ def interface_setup():
 
     # footer
     st.divider()
-    st.markdown(
-        """
+    st.markdown("""
         Based on the parametric synthesis algorithm by [Gatys et al. 2016](https://arxiv.org/abs/1508.06576).  
-        """
-    )
+        """)
 
 
 # streamlit run main.py --server.maxUploadSize 400
