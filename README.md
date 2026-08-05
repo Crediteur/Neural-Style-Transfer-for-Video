@@ -1,7 +1,9 @@
 # Neural Style Transfer for Video
 
 A user-friendly photo filter app based on Neural Style Transfer research by [Gatys](https://arxiv.org/abs/1508.06576). Expands original functionality to include video file processing by using masking techniques to preserve continuous motion and reduce artifacts. Exchangeable weights from pre-training on specific images allow fast feed forward style processing to significantly improve computation performance- at the trade-off of limited style options.
-Utilizes [Streamlit](https://docs.streamlit.io/) framework as a UX frontend. Try the app [here](https://neural-style-transfer-for-video-nbjk7qgsj6tebyvdbhlu2q.streamlit.app/).
+Utilizes [Streamlit](https://docs.streamlit.io/) framework as a UX frontend. 
+
+Try the online version [here](https://neural-style-transfer-for-video-nbjk7qgsj6tebyvdbhlu2q.streamlit.app/). Note this is the slower, CPU version, which may not work well when rendering videos.
 
 <img width="1313" height="713" alt="NST_video_preview" src="https://github.com/user-attachments/assets/f142a0d1-d311-4f9c-a6fe-43fe1a82b56e" />
 
